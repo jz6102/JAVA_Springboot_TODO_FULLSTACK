@@ -125,24 +125,9 @@ From `TodoBackend` run:
 ./mvnw test
 ```
 
-This runs the project's unit tests. If you prefer a quick build check, run `./mvnw -DskipTests package`.
+This runs the project's unit tests. If you prefer a quick build check, run `./mvnw -DskipTests package`
 
-## Troubleshooting
-
-- Port in use: change `server.port` in `application.properties`.
-- Database errors: verify `spring.datasource.*` values and ensure DB is reachable (Postgres) or switch to H2 for quick local runs.
-- JWT issues: check `JwtUtil.SECRET` and token expiration time.
-
-## Notes & next steps
-
-- The JWT secret in `JwtUtil` is a placeholder — for production use an environment-provided secret and longer expiration.
-- Consider enabling CORS if serving frontend from different origin (add CORS config in `SecurityConfig` or WebMvcConfigurer).
-- Add more tests around controllers and service layers.
 
 ---
 
-If you want, I can also:
-- Add a one-command script to run backend + serve frontend.
-- Swap default config to H2 and add a `docker-compose` for Postgres.
 
-If you'd like changes or stricter brevity, tell me which sections to shrink or expand.
